@@ -45,15 +45,15 @@ def check_current_performance ():
     stock_shares = my_stocks[key][0]
     print('***************************')
     print('Here is your stock list: ')
-    # try: 
-    stock_current_price = get_stock_price(url, key)
-    stock_current_price = float(stock_current_price.replace('$', ''))
-    total_price += int(stock_shares) * stock_current_price
+    try:
+      stock_current_price = get_stock_price(url, key)
+      stock_current_price = float(stock_current_price.replace('$', ''))
+      total_price += int(stock_shares) * stock_current_price
     print(key + ': ' + str(stock_shares) + ' shares ' + 'Average Cost: ' + str(my_stocks[key][1]) + ' Current Price: $' +str(stock_current_price))
-    # except:
-    #   print('Something goes wrong ')
-    #   print('stock_current_price', stock_current_price)
-    #   return
+    except:
+      print('Something goes wrong ')
+      print('stock_current_price', stock_current_price)
+      return
   #total cost is the original fund: $10,000
   #total value - total cost = performance
   print('***************************')
