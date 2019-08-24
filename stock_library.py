@@ -14,6 +14,7 @@ available_fund = 10000
 my_stocks = {}
 # menu view
 def show_menu ():
+  print('Welcome to my game!')
   menu = ['1.Check current performance', '2.Buy stock', '3.Sell stock', '4.Get current price of stock']
   print('Menu')
   for i in menu:
